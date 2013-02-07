@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Geoffrey Nutter (MTV Networks) -->
+<xs:schema xmlns:p="http://www.example.com/persondate" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/persondate">
+	<xs:element name="person">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="p:firstName"/>
+				<xs:element ref="p:lastName"/>
+				<xs:element ref="p:birthDate" minOccurs="0"/>
+				<xs:element ref="p:averageDay" minOccurs="0"/>
+				<xs:element ref="p:FavoriteMonth" minOccurs="0"/>
+				<xs:element ref="p:BirthMonth" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="namePart">
+		<xs:attribute name="value" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:element name="firstName" type="p:namePart"/>
+	<xs:element name="lastName" type="p:namePart"/>
+	<xs:element name="averageDay"/>
+	<xs:element name="birthDate" type="xs:date"/>
+	<xs:element name="FavoriteMonth" type="xs:gMonth"/>
+	<xs:element name="BirthMonth" type="xs:gYearMonth"/>
+</xs:schema>

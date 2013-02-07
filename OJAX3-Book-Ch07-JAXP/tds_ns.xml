@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schedule name="The Daily Show with Jon Stewart" seriesId="572"
+		xmlns="uri:comedy:schedule" xmlns:g="uri:comedy:guest">
+	<show date="06.12.06" weekday="Monday" dayNumber="12">
+		<g:guest>
+			<g:name>Thomas Friedman</g:name>
+			<g:credit>Author of "The World is Flat"</g:credit>
+		</g:guest>
+	</show>
+	<show date="06.13.06" weekday="Tuesday" dayNumber="13">
+		<g:guest>
+			<g:name>Ken Mehlman</g:name>
+			<g:credit>Chair of the Republican National Committee</g:credit>
+		</g:guest>
+	</show>
+	<show date="06.14.06" weekday="Wednesday" dayNumber="14">
+		<g:guest>
+			<g:name>Tim Russert</g:name>
+			<g:credit>Host of NBC's "Meet the Press"</g:credit>
+		</g:guest>
+	</show>
+	<show date="06.15.06" weekday="Thursday" dayNumber="15">
+		<g:guest>
+			<g:name>Louis C.K.</g:name>
+			<g:credit>Star of HBO series "Luckie Louie"</g:credit>
+		</g:guest>
+	</show>
+</schedule>

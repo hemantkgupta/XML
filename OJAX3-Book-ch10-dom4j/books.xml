@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="books.xsl"?>
+<books>
+	<book>
+		<title>Java &amp; XML</title>
+		<pubDate>2006</pubDate>
+	</book>
+	<book>
+		<title>Learning UML</title>
+		<pubDate>2003</pubDate>
+	</book>
+	<book>
+		<title>XML in a Nutshell</title>
+		<pubDate>2004</pubDate>
+	</book>
+	<book>
+		<title>Apache Cookbook</title>
+		<pubDate>2003</pubDate>
+	</book>
+</books>

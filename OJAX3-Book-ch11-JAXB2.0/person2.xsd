@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Geoffrey Nutter (MTV Networks) -->
+<xs:schema xmlns="http://www.example.com/person2" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/person2">
+	<xs:element name="person">
+		<xs:complexType>
+			<xs:attribute name="firstName" type="xs:string"/>
+			<xs:attribute name="lastName" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

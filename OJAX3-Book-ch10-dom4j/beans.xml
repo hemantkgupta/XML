@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<book class="javaxml3.BookBean" pubDate="2003" author="Sinan Si Alhir">
+		<title>Learning UML</title>
+	</book>
+	<book class="javaxml3.BookBean" pubDate="2004" title="XML in a Nutshell" />
+	<author class="javaxml3.AuthorBean"/>
+</beans>

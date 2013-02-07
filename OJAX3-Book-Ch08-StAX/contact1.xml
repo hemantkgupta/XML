@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contact>
+	<name>
+		<first_name>Justin</first_name>
+		<last_name>Edelson</last_name>
+	</name>
+	<address>
+		<line>1515 Broadway</line>
+		<city>New York</city>
+		<state>NY</state>
+		<zip>10036</zip>
+	</address>
+</contact>

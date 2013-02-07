@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0">
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:schemaBindings>
+				<jaxb:package name="com.example.artistbio"/>
+			</jaxb:schemaBindings>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:element name="artist">
+		<xs:annotation>
+			<xs:appinfo>
+				<jaxb:class name="BioArtist"/>
+				<jaxb:factoryMethod name="createArtist"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string">
+					<xs:annotation>
+						<xs:appinfo>
+							<jaxb:property>
+								<jaxb:javadoc>test of prop javadoc</jaxb:javadoc>
+							</jaxb:property>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="nameForSorting" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:appinfo>
+							<jaxb:property name="keyName"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="bio" minOccurs="0">
+					<xs:annotation>
+						<xs:appinfo>
+							<jaxb:dom/>
+						</xs:appinfo>
+					</xs:annotation>
+					<xs:complexType mixed="true">
+						<xs:complexContent mixed="true">
+							<xs:restriction base="xs:anyType">
+								<xs:sequence>
+									<xs:any minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:restriction>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="image" type="xs:base64Binary">
+					<xs:annotation>
+						<xs:appinfo>
+<!--							<jaxb:inlineBinaryData /> -->
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="b" type="format"/>
+	<xs:element name="i" type="format"/>
+	<xs:complexType name="format" mixed="true">
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

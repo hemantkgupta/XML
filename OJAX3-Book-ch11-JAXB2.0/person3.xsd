@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.example.com/person3" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/person3">
+	<xs:element name="person">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="firstName" type="namePart"/>
+				<xs:element name="lastName" type="namePart"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="namePart">
+		<xs:attribute name="value" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:schema>

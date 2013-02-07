@@ -1,0 +1,5 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE start SYSTEM "sample/entity.dtd" [
+  <!ENTITY ch1 "and">
+]>
+<start>me &ch1; you &ch2; you &amp; me</start>

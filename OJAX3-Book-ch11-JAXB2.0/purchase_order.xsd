@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:p="http://www.example.com/purchase" targetNamespace="http://www.example.com/purchase">
+	<xs:element name="purchaseOrder">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customer" type="p:customer"/>
+				<xs:element name="lineItems">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item" type="p:item" maxOccurs="unbounded"/>
+							<xs:element name="quantity" type="xs:positiveInteger"/>
+							<xs:element name="purchasePrice" type="p:price"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="items">
+		<xs:complexType/>
+	</xs:element>
+	<xs:complexType name="customer">
+		<xs:sequence>
+			<xs:element name="firstName" type="xs:string"/>
+			<xs:element name="lastName" type="xs:string"/>
+			<xs:element name="address" type="p:address"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="item">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="price" type="p:price"/>
+		</xs:sequence>
+		<xs:attribute name="itemID" type="xs:positiveInteger"/>
+	</xs:complexType>
+	<xs:complexType name="address"/>
+	<xs:complexType name="USaddress">
+		<xs:complexContent>
+			<xs:extension base="p:address">
+				<xs:sequence>
+					<xs:element name="street" type="xs:string"/>
+					<xs:element name="city" type="xs:string"/>
+					<xs:element name="state" type="xs:string"/>
+					<xs:element name="zip">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[0-9][0-9][0-9][0-9][0-9]"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UKaddress">
+		<xs:complexContent>
+			<xs:extension base="p:address">
+				<xs:sequence>
+					<xs:element name="street" type="xs:string"/>
+					<xs:element name="city" type="xs:string"/>
+					<xs:element name="postcode">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[A-Z][0-9][0-9A-Z]? [0-9][A-Z][A-Z]"/>
+								<xs:pattern value="[A-Z][A-Z][0-9][0-9A-Z]? [0-9][A-Z][A-Z]"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="price">
+		<xs:restriction base="xs:float">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

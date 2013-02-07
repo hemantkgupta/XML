@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:p="http://www.example.com/purchase2" xmlns:c="http://www.example.com/customer" targetNamespace="http://www.example.com/purchase2">
+	<xs:import namespace="http://www.example.com/customer" schemaLocation="customer.xsd"/>
+	<xs:element name="purchaseOrder">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customer" type="c:customer"/>
+				<xs:element name="lineItems">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item" type="p:item" maxOccurs="unbounded"/>
+							<xs:element name="quantity" type="xs:positiveInteger"/>
+							<xs:element name="purchasePrice" type="p:price"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="items">
+		<xs:complexType/>
+	</xs:element>
+	<xs:complexType name="item">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="price" type="p:price"/>
+		</xs:sequence>
+		<xs:attribute name="itemID" type="xs:positiveInteger"/>
+	</xs:complexType>
+	<xs:simpleType name="price">
+		<xs:restriction base="xs:float">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

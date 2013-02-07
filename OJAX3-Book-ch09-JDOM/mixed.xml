@@ -1,0 +1,6 @@
+<p>
+The <span class="literal">Element class</span> method is also available on the
+<span class="literal">Element class</span>, and returns
+all content of the element, regardless of type (elements, processing instructions,
+comments, entities, and <span class="literal">Text</span> objects for textual content). 
+</p>

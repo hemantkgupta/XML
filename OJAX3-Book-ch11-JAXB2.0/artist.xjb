@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings version="2.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<jaxb:bindings schemaLocation="artist-plain.xsd">
+	<jaxb:bindings node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="com.example.artist" />
+		</jaxb:schemaBindings>
+		<jaxb:bindings node="./xs:element[@name='artist']">
+			<jaxb:class name="MyArtist"/>
+			<jaxb:bindings node=".//xs:element[@name='nameForSorting']">
+				<jaxb:property name="keyName"/>
+			</jaxb:bindings>
+		</jaxb:bindings>
+		</jaxb:bindings>
+	</jaxb:bindings>
+</jaxb:bindings>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contacts SYSTEM "sample/contacts.dtd">
+<contacts>
+	<contact>
+		<name>
+			<first>Lola</first>
+			<last>Hires</last>
+		</name>
+		<address>
+			<line>PO Box 208</line>
+			<city>Crompond</city>
+			<state>NY</state>
+			<zip>10517</zip>
+		</address>
+	</contact>
+	<contact>
+		<name>
+			<first><![CDATA[Burt]]></first>
+			<middle>Bachrach</middle>
+			<last>Hires</last>
+		</name>
+		<address>
+			<line>57 Townsend Road</line>
+			<line>PO Box 208</line>
+			<city>Crompond</city>
+			<state>NY</state>
+			<zip>10517</zip>
+		</address>
+	</contact>
+</contacts>

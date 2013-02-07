@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<books>
+	<book>
+		<name>Java &amp; XML</name>
+		<pubDate>2006</pubDate>
+	</book>
+	<book>
+		<name>Java In a Nutshell</name>
+	</book>
+</books>

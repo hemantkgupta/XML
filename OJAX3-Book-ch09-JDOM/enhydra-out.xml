@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Testing XMLProperties class--><properties><org><enhydra><classpath><separator>":"</separator></classpath><initialargs>"./bootstrap.conf"</initialargs><initialclass>org.enhydra.multiServer.bootstrap.Bootstrap</initialclass><classpath>"."</classpath></enhydra><xml><sax><parser>"org.apache.xerces.parsers.SAXParser"</parser></sax></xml></org></properties>

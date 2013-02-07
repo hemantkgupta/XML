@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:purchaseOrder xmlns:p="http://www.example.com/purchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/purchase purchase_order.xsd">
+	<customer>
+		<firstName>Lola</firstName>
+		<lastName>Hires</lastName>
+			<address xsi:type="p:UKaddress">
+				<street>1515 Broadway</street>
+				<city>New York</city>
+				<!-- <state>NY</state> -->
+				<postcode>WH10 7BQ</postcode>
+			</address>
+	</customer>
+	<lineItems>
+		<item>
+			<name/>
+		</item>
+		<quantity>2</quantity>
+		<price>.50</price>
+	</lineItems>
+</p:purchaseOrder>
